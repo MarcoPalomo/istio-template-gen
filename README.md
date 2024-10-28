@@ -21,8 +21,14 @@ Just use it like this :
 
     $ python templ-gen.py generate --service my-app --namespace cms --domain my-domain.com
 ```
+The necessary libraries to run use this script are in the **requirements.txt** file.
 
-The usage is available too :
+```bash
+
+    $ pip install -r requirements.txt
+```
+
+Take a look at the usage doing so :
 
 ```bash
 
