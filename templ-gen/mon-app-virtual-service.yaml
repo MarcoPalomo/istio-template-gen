@@ -1,0 +1,14 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: mon-app-vs
+  namespace: lms
+spec:
+  hosts:
+  - mon-app.elysee-learn.com
+  http:
+  - route:
+    - destination:
+        host: mon-app.elysee-learn.com
+        subset: v1
+      weight: 100

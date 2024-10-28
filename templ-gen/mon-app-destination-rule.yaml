@@ -1,0 +1,14 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: mon-app-dr
+  namespace: lms
+spec:
+  host: mon-app.elysee-learn.com
+  subsets:
+  - labels:
+      version: v1
+    name: v1
+  trafficPolicy:
+    loadBalancer:
+      simple: ROUND_ROBIN
